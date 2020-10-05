@@ -5,7 +5,7 @@
 
 // module.exports = connection;
 
-const dbConfigObj = require('./knexfile')
+const dbConfigObj = require('../../knexfile')
 
 // .....
 

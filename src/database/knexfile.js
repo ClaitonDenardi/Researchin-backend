@@ -1,15 +1,10 @@
-module.exports = {
+const knex = require('knex');
+const configuration = require('../../knexfile');
 
-  development: {
-    client: 'sqlite3',
-    connection: {
-      filename: './src/database/db.sqlite'
-    },
-    migrations: {
-      directory: './src/database/migrations'
-    },
-    useNullAsDefault: true,
-  },
+const connection = knex(configuration.production);
+
+module.exports = connection;
+configuration = {
   production: {
     client: 'pg', connection: process.env.DATABASE_URL
   }

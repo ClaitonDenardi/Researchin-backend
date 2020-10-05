@@ -4,10 +4,7 @@ const cors = require('cors');
 
 const app = express();
 
-app.use(cors(
-    // colocar link do front depois
-    //{origin: 'LINK';}
-));
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 
